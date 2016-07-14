@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<!-- saved from url=(0073)file:///C:/Users/Administrator/AppData/Local/Temp/MarkdownPadPreview.html -->
+<html data-ember-extension="1">
+<style type="text/css" id="110401307727"></style>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script src="src/jquery-2.2.3.min.js"></script>
+    <script src="src/bridge.js?v=1.0.0"></script>
+    <script src="src/example.js?v=1.0.0"></script>
+    <title>import</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <style type="text/css">
+        /* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+        /* Author: Nicolas Hery - http://nicolashery.com */
+        /* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+        /* Source: https://github.com/nicolahery/markdownpad-github */
+
+        /* RESET
+        =============================================================================*/
+
+        html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+
+        /* BODY
+        =============================================================================*/
+
+        body {
+            font-family: Helvetica, arial, freesans, clean, sans-serif;
+            font-size: 14px;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+            padding: 20px;
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        body > *:first-child {
+            margin-top: 0 !important;
+        }
+
+        body > *:last-child {
+            margin-bottom: 0 !important;
+        }
+
+        /* BLOCKS
+        =============================================================================*/
+
+        p, blockquote, ul, ol, dl, table, pre {
+            margin: 15px 0;
+        }
+
+        /* HEADERS
+        =============================================================================*/
+
+        h1, h2, h3, h4, h5, h6 {
+            margin: 20px 0 10px;
+            padding: 0;
+            font-weight: bold;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+            font-size: inherit;
+        }
+
+        h1 {
+            font-size: 28px;
+            color: #000;
+        }
+
+        h2 {
+            font-size: 24px;
+            border-bottom: 1px solid #ccc;
+            color: #000;
+        }
+
+        h3 {
+            font-size: 18px;
+        }
+
+        h4 {
+            font-size: 16px;
+        }
+
+        h5 {
+            font-size: 14px;
+        }
+
+        h6 {
+            color: #777;
+            font-size: 14px;
+        }
+
+        body > h2:first-child, body > h1:first-child, body > h1:first-child + h2, body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+            margin-top: 0;
+            padding-top: 0;
+        }
+
+        a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+            margin-top: 0;
+            padding-top: 0;
+        }
+
+        h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
+            margin-top: 10px;
+        }
+
+        /* LINKS
+        =============================================================================*/
+
+        a {
+            color: #4183C4;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* LISTS
+        =============================================================================*/
+
+        ul, ol {
+            padding-left: 30px;
+        }
+
+        ul li > :first-child,
+        ol li > :first-child,
+        ul li ul:first-of-type,
+        ol li ol:first-of-type,
+        ul li ol:first-of-type,
+        ol li ul:first-of-type {
+            margin-top: 0px;
+        }
+
+        ul ul, ul ol, ol ol, ol ul {
+            margin-bottom: 0;
+        }
+
+        dl {
+            padding: 0;
+        }
+
+        dl dt {
+            font-size: 14px;
+            font-weight: bold;
+            font-style: italic;
+            padding: 0;
+            margin: 15px 0 5px;
+        }
+
+        dl dt:first-child {
+            padding: 0;
+        }
+
+        dl dt > :first-child {
+            margin-top: 0px;
+        }
+
+        dl dt > :last-child {
+            margin-bottom: 0px;
+        }
+
+        dl dd {
+            margin: 0 0 15px;
+            padding: 0 15px;
+        }
+
+        dl dd > :first-child {
+            margin-top: 0px;
+        }
+
+        dl dd > :last-child {
+            margin-bottom: 0px;
+        }
+
+        /* CODE
+        =============================================================================*/
+
+        pre, code, tt {
+            font-size: 12px;
+            font-family: Consolas, "Liberation Mono", Courier, monospace;
+        }
+
+        code, tt {
+            margin: 0 0px;
+            padding: 0px 0px;
+            white-space: nowrap;
+            border: 1px solid #eaeaea;
+            background-color: #f8f8f8;
+            border-radius: 3px;
+        }
+
+        pre > code {
+            margin: 0;
+            padding: 0;
+            white-space: pre;
+            border: none;
+            background: transparent;
+        }
+
+        pre ,.result {
+            background-color: #f8f8f8;
+            border: 1px solid #ccc;
+            font-size: 13px;
+            line-height: 19px;
+            overflow: auto;
+            padding: 6px 10px;
+            border-radius: 3px;
+        }
+        pre code, pre tt {
+            background-color: transparent;
+            border: none;
+        }
+
+        kbd {
+            -moz-border-bottom-colors: none;
+            -moz-border-left-colors: none;
+            -moz-border-right-colors: none;
+            -moz-border-top-colors: none;
+            background-color: #DDDDDD;
+            background-image: linear-gradient(#F1F1F1, #DDDDDD);
+            background-repeat: repeat-x;
+            border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+            border-image: none;
+            border-radius: 2px 2px 2px 2px;
+            border-style: solid;
+            border-width: 1px;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            line-height: 10px;
+            padding: 1px 4px;
+        }
+
+        /* QUOTES
+        =============================================================================*/
+
+        blockquote {
+            border-left: 4px solid #DDD;
+            padding: 0 15px;
+            color: #777;
+        }
+
+        blockquote > :first-child {
+            margin-top: 0px;
+        }
+
+        blockquote > :last-child {
+            margin-bottom: 0px;
+        }
+
+        /* HORIZONTAL RULES
+        =============================================================================*/
+
+        hr {
+            clear: both;
+            margin: 15px 0;
+            height: 0px;
+            overflow: hidden;
+            border: none;
+            background: transparent;
+            border-bottom: 4px solid #ddd;
+            padding: 0;
+        }
+
+        /* TABLES
+        =============================================================================*/
+
+        table th {
+            font-weight: bold;
+        }
+
+        table th, table td {
+            border: 1px solid #ccc;
+            padding: 6px 13px;
+        }
+
+        table tr {
+            border-top: 1px solid #ccc;
+            background-color: #fff;
+        }
+
+        table tr:nth-child(2n) {
+            background-color: #f8f8f8;
+        }
+
+        /* IMAGES
+        =============================================================================*/
+
+        img {
+            max-width: 100%
+        }
+        input{
+            width:95%;
+            height:30px;
+            font-size:14px;
+            padding:0 10px;
+            border:1px solid #cecece;
+            margin-bottom:10px;
+            background-color:#4183C4;
+            color:#fff;
+        }
+        a.native{
+            font-size:16px;
+            font-weight: bold;
+            display:block;
+            background-color:blue;
+            color:#fff;
+            -webkit-border-radius:10px;
+            -moz-border-radius:10px;
+            border-radius:10px;
+            margin-bottom:10px;
+            text-align: center;;
+        }
+    </style>
+    <!--<base href="file:\\\E:\h5协议\">-->
+    <base href=".">
+</head>
+<body>
+<div id="debug"></div>
+<h1>接口文档</h1>
+<h2 style="text-align:right;"><a href="index-2.html">下一页>></a></h2>
+<h2>打开webview的协议,app中使用（内部webview）</h2>
+<h3>1.直接打开url</h3>
+<pre><code>native://openurl?data={url:website,token:1,cookie:1,param:string}
+</code></pre>
+<div class="demo">
+<input type="text" class="data" value='{"url":"http://tianxiangbing.github.io/Hybrid/?a=1&b=2","token":1,"cookie":1,"param":"string"}'/><a class="native link" href="native://openurl?data=">native://openurl?data={url:website,token:1,cookie:1,param:string}</a>
+</div>
+    <p><em>会直接把开参数url，并把param的参数加在url后，结果变成<code>website?param=string</code>,token和cookie默认为空</em></p>
+<ol>
+    <li><code>url</code>:需要打开的url地址 [<em>必填</em>]</li>
+    <li><code>token</code>:是否传递token信息 [<em>选填1为传递，默认不传</em>]传token时需要必传appid</li>
+    <li><code>appid</code>:appid,传token时必填</li>
+    <li><code>cookie</code>：是否写入cookie [<em>选填,1为写入，默认不写</em>]</li>
+    <li><code>param</code>:添加的参数信息 [<em>选填的键值对字符串</em>]</li>
+</ol>
+<h3>2.先打开含webview的应用，唤醒app应用。</h3>
+<pre><code>native://openapp?data={appid:1,param:string}
+</code></pre>
+
+<div class="demo">
+    <input type="text" class="data" value='{"appid":1,"param":"string"}'/><a class="native link" href="native://openapp?data=">native://openapp?data={appid:1,param:string}</a>
+</div>
+<ol>
+    <li><code>appid</code>:客户端根据appid从本地获取应用的url，通过唤醒应用的方式打开应用 [<em>必填</em>]</li>
+    <li><code>param</code>:添加到url后的参数 [<em>选填的键值对字符串</em>]</li>
+</ol>
+<h2>以下为h5中调用app的接口</h2>
+<p><code>native://method?data={}&amp;callback=callbackname</code></p>
+<p><strong>data参数都进行UrlEncode加码成字符串</strong></p>
+<h3>1.获取当前客户端版本的版本号。</h3>
+<pre><code>native://getversion?callback=getversion
+</code></pre>
+
+<div class="demo">
+    <input value="getversion" class="callback"/><a class="native" href="native://getversion">native://getversion</a>
+    <div class="result">
+
+    </div>
+</div>
+
+<ol>
+    <li><code>callback</code>回调方法 [<em>必填</em>]</li>
+</ol>
+<p>返回的data格式应为:</p>
+<pre><code>{
+    code: 200,
+    msg: "执行成功",
+    data: {version:"1.0.0"}
+    }
+</code></pre>
+
+<p><em>回调getversion(version)的参数就是返回值</em></p>
+<h3>2.获取当前客户端的支持的所有协议接口</h3>
+<pre><code>native://getallmethod?callback=getallmethod
+</code></pre>
+
+<div class="demo">
+    <input value="getallmethod" class="callback"/><a class="native" href="native://getallmethod">native://getallmethod</a>
+    <div class="result">
+
+    </div>
+</div>
+<p>返回的<code>data</code>格式应为:</p>
+<pre><code>{
+    code: 200,
+    msg: "执行成功",
+    data: ["methodname1","methodname2","methodname3"...]
+    }
+</code></pre>
+
+<p><em>getallmethod([m1,m2..])参数为方法名的集合</em></p>
+<h3><s>3.判断当前客户端是否支持某个协议方法</s> <b>该方法废用，请使用`getallmethod`</b></h3>
+<pre><code>native://checkmethod?data={method:m1}&amp;callback=checkmethod
+</code></pre>
+
+<ol>
+    <li><code>method</code>参数为方法名称 [<em>必填</em>]</li>
+    <li><code>callback</code>返回bool</li>
+</ol>
+<p>返回的<code>data</code>格式应为:</p>
+<pre><code>{
+    code: 200,
+    msg: "执行成功",
+    data: true
+    }
+</code></pre>
+
+<div class="demo">
+    <input type="text" class="data" value='{"method":"photo"}'/>
+    <input value="checkmethod" class="callback"/><a class="native" href="native://checkmethod">native://checkmethod</a>
+    <div class="result">
+
+    </div>
+</div>
+<h3>4.分享组件</h3>
+<pre><code>native://outershare?data={type:1,title:标题,desc:描述,link:分享地址,pic:图片}
+</code></pre>
+
+<div class="demo">
+    <input value='{"type":1,"title":"标题","desc":"描述","link":"分享地址","pic":"图片"}' class="data"/><a class="native" href="native://outershare">native://outershare</a>
+    <div class="result">
+
+    </div>
+</div>
+<ol>
+    <li><code>type</code>:1为微信朋友圈分享，2为发送给微信朋友，3为分享到彩云好友，4为发给QQ好友 [必填项1,2,3,4]</li>
+    <li><code>title</code>:标题 [<em>选填，为空时取当前窗口的title</em>]</li>
+    <li><code>desc</code>:描述 [<em>选填</em>]</li>
+    <li><code>link</code>:链接 [<em>选填，为空时取当前url</em>]</li>
+    <li><code>pic</code>:图片地址 [<em>选填，为空时给默认图片</em>]</li>
+    <li><code>callback</code>:回调 [<em>选填</em>]</li>
+</ol>
+<p>返回的data格式应为:</p>
+<pre><code>{
+    code: 200,
+    msg: "分享成功",
+    data: []
+    }
+</code></pre>
+
+<h3>4.1短信分享组件(先选人)</h3>
+<pre><code>native://msgshare?data={filter:unactived,desc:描述}
+</code></pre>
+
+<div class="demo">
+    <input value='{"filter":"unactived","desc":"描述"}' class="data"/><a class="native" href="native://msgshare?">native://msgshare</a>
+    <div class="result">
+
+    </div>
+</div>
+<ol>
+    <li><code>filter</code>:"all".全部,"unactived".未激活</li>
+    <li><code>desc</code>:内容 [*选填，为空时取当前窗口的内容*]</li>
+</ol>
+<p>返回的data格式应为:</p>
+<pre><code>{
+    code: 200,
+    msg: "分享成功",
+    data: []
+    }
+</code></pre>
+
+
+<h3>5.用户选择组件（待补充）</h3>
+<pre><code>native://selectmembers?data={multi:1,hasme:1,orgid:1001,selected:[{id:1001},{id:1002}]}&amp;callback=selectmembers
+</code></pre>
+
+<div class="demo">
+    <input value='{multi:1,hasme:1,orgid:1001,selected:[{id:1001},{id:1002}]}' class="data"/><input value="selectmembers" class="callback"/><a class="native" href="native://selectmembers">native://selectmembers</a>
+    <div class="result">
+
+    </div>
+</div>
+
+<ol>
+    <li><code>multi</code>:是否多选，1是多选，无或非1为单选 [必填]</li>
+    <li><code>hasme</code>:1是包含自己，0是不包含自己	[选填]</li>
+    <li><code>selected</code>:已选</li>
+    <li><code>orgid</code>:企业ID，不传为全部企业</li>
+    <li><code>callback</code>:[<em>必填</em>]</li>
+</ol>
+<p>返回的data格式应为:</p>
+<pre><code>	{
+		code: 200,
+		msg: "执行成功",
+		data: [{
+			id:1001,
+			name:"李三"
+		}]
+	}
+</code></pre>
+
+<h3>6.获取当前地理位置</h3>
+<pre><code>native://getlocation?callback=getlocation
+</code></pre>
+
+<div class="demo">
+    <input value="getlocation" class="callback"/><a class="native" href="native://getlocation">native://getlocation</a>
+    <div class="result">
+
+    </div>
+</div>
+
+<ol>
+    <li><code>callback</code>返回经纬度. [<em>必填</em>]</li>
+</ol>
+<p>返回的data格式应为:</p>
+<pre><code>{
+    code: 200,
+    msg: "执行成功",
+    data: [
+    291.25,
+    286.21
+    ]
+    }
+</code></pre>
+
+<h3>7.H5打点到友盟 通过客户端完成</h3>
+<pre><code>native://pagestat?data={eventId:"checkin", param:"123"}
+</code></pre>
+
+<div class="demo">
+    <input value='{"eventId":"checkin","param":"a=1"}' class="data"/><input value="pagestat" class="callback"/><a class="native" href="native://pagestat">native://pagestat</a>
+    <div class="result">
+
+    </div>
+</div>
+<ol>
+    <li><code>eventId</code> 统计事件ID，在友盟中定义. [<em>必选</em>]</li>
+    <li><code>param</code> 在友盟里的一个跟踪参数. [<em>选填</em>]</li>
+</ol>
+
+<h3>8.获取用户手机类型（移动联动电信）</h3>
+<pre><code>native://getoperator
+</code></pre>
+
+<p>返回的data格式应为:</p>
+<pre><code>{
+	    code: 200,
+	    msg: "执行成功",
+	    data: {
+	    service :?,
+	    code:"571"
+    }
+   }
+</code></pre>
+
+<div class="demo">
+<input value="getoperator" class="callback"/><a class="native" href="native://getoperator">native://getoperator</a>
+    <div class="result">
+
+    </div>
+</div>
+
+<hr>
+<h2>外部应用调用</h2>
+<h3>1.外部页面分享到彩云或麻绳，唤起选聊天对象界面</h3>
+<pre><code>ccoa://outershare?data={title:标题,desc:描述,link:分享地址,pic:图片,from:手厅,icon:手厅图标,schemas:schemadefine}
+</code></pre>
+
+<div class="demo">
+    <input value='{"title":"标题","desc":"描述","link":"分享地址","pic":"图片","from":"手厅","icon":"手厅图标","schemas":"schemadefine"}' class="data"/><a class="native link" href="ccoa://outershare?data=">ccoa://outershare?data=</a>
+    <input value='{"title":"标题","desc":"描述","link":"分享地址","pic":"图片","from":"手厅","icon":"手厅图标","schemas":"schemadefine"}' class="data"/><a class="native link" href="masheng://outershare?data=">masheng://outershare?data=</a>
+</div>
+<ol>
+    <li>彩云用 ccoa:// 麻绳用 masheng:// 以后的再说</li>
+    <li><code>title</code>:标题 （必选）</li>
+    <li><code>desc</code>:描述 （必选）</li>
+    <li><code>link</code>:链接 （必选）</li>
+    <li><code>pic</code>:图片地址 不填不展示</li>
+    <li><code>from</code>:消息框左下角的小字，不填的时候不展示</li>
+    <li><code>icon</code>:消息框左下角的小图标，不填的时候不展示</li>
+    <li><code>schemas</code>:外部schema，返回到源客户端时候用</li>
+</ol>
+<hr>
+<h2>返回callback的通用格式</h2>
+<pre><code>｛
+    data:object, //{}||[]
+    code:200,
+    msg:"成功"
+    ｝
+</code></pre>
+
+<p>Native调用example:</p>
+<pre><code>window.JSBridge.onSuccess('token_1439804657177',{
+    code: 200,
+    msg: "执行成功",
+    data: [
+    {name: "秋知", tel: 15889936061},
+    {name: "移动客服", tel: 10086}
+    ]
+    });
+</code></pre>
+
+<ol>
+    <li><code>data</code>:返回的值，为json对象或数组</li>
+    <li><code>code</code>：状态码,200为成功,其他待定</li>
+    <li><code>msg</code>：返回信息</li>
+</ol>
+<script>
+    function sendhy(){
+        window.JSBridge.requestHybrid({
+            method: "outershare",
+            data: {type:'3',title:'标题',desc:'描述',link:'分享地址',pic:'图片'},
+            callback: function (data) {
+                alert(data);
+            }
+        });
+    }
+</script>
+<input type="button" id="outshare" onclick="sendhy()" value="测试分享"/>
+
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
+</body>
+</html>

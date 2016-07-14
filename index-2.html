@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<!-- saved from url=(0073)file:///C:/Users/Administrator/AppData/Local/Temp/MarkdownPadPreview.html -->
+<html data-ember-extension="1">
+<style type="text/css" id="110401307727"></style>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script src="src/jquery-2.2.3.min.js"></script>
+    <script src="src/bridge.js?v=1.0.0"></script>
+    <script src="src/example.js?v=1.0.0"></script>
+    <title>import</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <style type="text/css">
+        /* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+        /* Author: Nicolas Hery - http://nicolashery.com */
+        /* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+        /* Source: https://github.com/nicolahery/markdownpad-github */
+
+        /* RESET
+        =============================================================================*/
+
+        html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+
+        /* BODY
+        =============================================================================*/
+
+        body {
+            font-family: Helvetica, arial, freesans, clean, sans-serif;
+            font-size: 14px;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+            padding: 20px;
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        body > *:first-child {
+            margin-top: 0 !important;
+        }
+
+        body > *:last-child {
+            margin-bottom: 0 !important;
+        }
+
+        /* BLOCKS
+        =============================================================================*/
+
+        p, blockquote, ul, ol, dl, table, pre {
+            margin: 15px 0;
+        }
+
+        /* HEADERS
+        =============================================================================*/
+
+        h1, h2, h3, h4, h5, h6 {
+            margin: 20px 0 10px;
+            padding: 0;
+            font-weight: bold;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+            font-size: inherit;
+        }
+
+        h1 {
+            font-size: 28px;
+            color: #000;
+        }
+
+        h2 {
+            font-size: 24px;
+            border-bottom: 1px solid #ccc;
+            color: #000;
+        }
+
+        h3 {
+            font-size: 18px;
+        }
+
+        h4 {
+            font-size: 16px;
+        }
+
+        h5 {
+            font-size: 14px;
+        }
+
+        h6 {
+            color: #777;
+            font-size: 14px;
+        }
+
+        body > h2:first-child, body > h1:first-child, body > h1:first-child + h2, body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+            margin-top: 0;
+            padding-top: 0;
+        }
+
+        a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+            margin-top: 0;
+            padding-top: 0;
+        }
+
+        h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
+            margin-top: 10px;
+        }
+
+        /* LINKS
+        =============================================================================*/
+
+        a {
+            color: #4183C4;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* LISTS
+        =============================================================================*/
+
+        ul, ol {
+            padding-left: 30px;
+        }
+
+        ul li > :first-child,
+        ol li > :first-child,
+        ul li ul:first-of-type,
+        ol li ol:first-of-type,
+        ul li ol:first-of-type,
+        ol li ul:first-of-type {
+            margin-top: 0px;
+        }
+
+        ul ul, ul ol, ol ol, ol ul {
+            margin-bottom: 0;
+        }
+
+        dl {
+            padding: 0;
+        }
+
+        dl dt {
+            font-size: 14px;
+            font-weight: bold;
+            font-style: italic;
+            padding: 0;
+            margin: 15px 0 5px;
+        }
+
+        dl dt:first-child {
+            padding: 0;
+        }
+
+        dl dt > :first-child {
+            margin-top: 0px;
+        }
+
+        dl dt > :last-child {
+            margin-bottom: 0px;
+        }
+
+        dl dd {
+            margin: 0 0 15px;
+            padding: 0 15px;
+        }
+
+        dl dd > :first-child {
+            margin-top: 0px;
+        }
+
+        dl dd > :last-child {
+            margin-bottom: 0px;
+        }
+
+        /* CODE
+        =============================================================================*/
+
+        pre, code, tt {
+            font-size: 12px;
+            font-family: Consolas, "Liberation Mono", Courier, monospace;
+        }
+
+        code, tt {
+            margin: 0 0px;
+            padding: 0px 0px;
+            white-space: nowrap;
+            border: 1px solid #eaeaea;
+            background-color: #f8f8f8;
+            border-radius: 3px;
+        }
+
+        pre > code {
+            margin: 0;
+            padding: 0;
+            white-space: pre;
+            border: none;
+            background: transparent;
+        }
+
+        pre ,.result {
+            background-color: #f8f8f8;
+            border: 1px solid #ccc;
+            font-size: 13px;
+            line-height: 19px;
+            overflow: auto;
+            padding: 6px 10px;
+            border-radius: 3px;
+        }
+        pre code, pre tt {
+            background-color: transparent;
+            border: none;
+        }
+
+        kbd {
+            -moz-border-bottom-colors: none;
+            -moz-border-left-colors: none;
+            -moz-border-right-colors: none;
+            -moz-border-top-colors: none;
+            background-color: #DDDDDD;
+            background-image: linear-gradient(#F1F1F1, #DDDDDD);
+            background-repeat: repeat-x;
+            border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+            border-image: none;
+            border-radius: 2px 2px 2px 2px;
+            border-style: solid;
+            border-width: 1px;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            line-height: 10px;
+            padding: 1px 4px;
+        }
+
+        /* QUOTES
+        =============================================================================*/
+
+        blockquote {
+            border-left: 4px solid #DDD;
+            padding: 0 15px;
+            color: #777;
+        }
+
+        blockquote > :first-child {
+            margin-top: 0px;
+        }
+
+        blockquote > :last-child {
+            margin-bottom: 0px;
+        }
+
+        /* HORIZONTAL RULES
+        =============================================================================*/
+
+        hr {
+            clear: both;
+            margin: 15px 0;
+            height: 0px;
+            overflow: hidden;
+            border: none;
+            background: transparent;
+            border-bottom: 4px solid #ddd;
+            padding: 0;
+        }
+
+        /* TABLES
+        =============================================================================*/
+
+        table th {
+            font-weight: bold;
+        }
+
+        table th, table td {
+            border: 1px solid #ccc;
+            padding: 6px 13px;
+        }
+
+        table tr {
+            border-top: 1px solid #ccc;
+            background-color: #fff;
+        }
+
+        table tr:nth-child(2n) {
+            background-color: #f8f8f8;
+        }
+
+        /* IMAGES
+        =============================================================================*/
+
+        img {
+            max-width: 100%
+        }
+        input{
+            width:95%;
+            height:30px;
+            font-size:14px;
+            padding:0 10px;
+            border:1px solid #999;
+            margin-bottom:10px;
+            background-color:#fff;
+            color:#666;
+            font-weight: bold;
+        }
+        a.native{
+            font-size:16px;
+            font-weight: bold;
+            display:block;
+            background-color:blue;
+            color:#fff;
+            border-radius:5px;
+            margin-bottom:10px;
+            text-align: center;
+            border:1px solid #5ca941;
+            background-color:#60b044;
+        }
+    </style>
+    <!--<base href="file:\\\E:\h5协议\">-->
+    <base href=".">
+</head>
+<body>
+<h1>接口文档</h1>
+<h2 style="text-align:left;"><a href="index.html"><<上一页</a></h2>
+<h3>alert提示框</h3>
+<pre><code>native://alert?data={title:&quot;标题&quot;,msg:&quot;提示信息&quot;}
+</code></pre>
+<div class="demo">
+    <input value='{"title":"标题","msg":"描述描述描述描述"}' class="data"/><a class="native" href="native://alert?">native://alert</a>
+    <div class="result">
+
+    </div>
+</div>
+<ol>
+<li><code>title</code>：标题   <em>选填</em> </li>
+<li><code>msg</code>：提示信息   <em>必填</em></li>
+</ol>
+<h3>confirm确认框</h3>
+<pre><code>native://confirm?data={title:&quot;标题&quot;,msg:&quot;提示信息&quot;ok:&quot;确定的文本&quot;cancel:&quot;取消的文本&quot;}&amp;callback=confirm
+</code></pre>
+
+<div class="demo">
+    <input value='{"title":"标题","msg":"描述描述描述描述","ok":"确定的文本","cancel":"取消的文本"}' class="data"/><input value="confirm" class="callback"/><a class="native" href="native://confirm?">native://confirm</a>
+    <div class="result">
+
+    </div>
+</div>
+
+<ol>
+<li><code>title</code>：标题   <em>必填</em></li>
+<li><code>msg</code>：提示信息   <em>必填</em></li>
+
+<li><code>ok</code>：确定的文本   <em>默认“确定”</em></li>
+
+<li><code>cancel</code>：取消的文本  <em>默认“取消”</em></li>
+<li><code>callback</code>：点击确认后的回调  <em>必填</em></li>
+</ol>
+<p>返回的data格式应为:</p>
+<pre><code>{
+    code: 200,
+    msg: &quot;执行成功&quot;,
+    data:&quot;ok&quot;//ok是点了确定,cancel是点了取消
+}
+</code></pre>
+
+<h3>prompt 输入提示框</h3>
+<pre><code>native://prompt?data={title:&quot;标题&quot;,msg:&quot;提示信息&quot;,placeholder:&quot;请输入文字&quot;}&amp;callback=prompt
+</code></pre>
+
+<div class="demo">
+    <input value='{"title":"标题","msg":"描述描述描述描述","placeholder":"请输入xxx"}' class="data"/><input value="prompt" class="callback"/><a class="native" href="native://prompt?">native://prompt</a>
+    <div class="result">
+
+    </div>
+</div>
+<ol>
+<li><code>title</code>：标题   <em>必填</em></li>
+<li><code>msg</code>：提示信息   <em>选填</em></li>
+<li><code>value</code>:默认文本 <em>选填</em></li>
+<li><code>placeholder</code>:文本框提示文本    <em>选填</em></li>
+<li><code>callback</code>：点击确认后的回调  <em>必填</em></li>
+</ol>
+<p>返回的data格式应为:</p>
+<pre><code>{
+    code: 200,
+    msg: &quot;执行成功&quot;,
+    data:&quot;输入的内容&quot;
+}
+</code></pre>
+
+<h3>toast 小提示弹窗</h3>
+<pre><code>native://toast?data={time:3,msg:&quot;提示信息&quot;}
+</code></pre>
+
+<div class="demo">
+    <input value='{"time":3,"msg":"描述描述描述描述"}' class="data"/><input value="toast" class="callback"/><a class="native" href="native://toast?">native://toast</a>
+    <div class="result">
+
+    </div>
+</div>
+
+<ol>
+<li><code>time</code>：展示时间 <em>选填，默认2s</em></li>
+<li><code>msg</code>:提示消息 ,支持多行显示 \n <em>必填</em></li>
+</ol>
+<h3>actionsheet 操作选择</h3>
+<pre><code>native://actionsheet?data={title:&quot;请选择&quot;,list:[{text:选项一,value:&quot;001&quot;}]}&amp;callback=actionsheet
+</code></pre>
+
+<div class="demo">
+    <input value='{"title":"请选择","list":[{"text":"选项一","value":"001"}]}' class="data"/><input value="actionsheet" class="callback"/><a class="native" href="native://actionsheet?">native://actionsheet</a>
+    <div class="result">
+
+    </div>
+</div>
+
+<ol>
+<li><code>title</code>:标题 <em>选填</em></li>
+<li><code>list</code>:选项数组 ,键值对 <em>必填</em></li>
+<li><code>callback</code>:回调,返回选中项</li>
+</ol>
+<p>返回的data格式应为:</p>
+<pre><code>{
+    code: 200,
+    msg: &quot;执行成功&quot;,
+    data:{text:选项一,value:&quot;001&quot;}
+}
+</code></pre>
+
+<h3>modal 弹窗</h3>
+<pre><code>native://modal?data={title:&quot;标题&quot;,msg:&quot;内容&quot;,img:&quot;url&quot;,link:&quot;url&quot;}
+</code></pre>
+
+<div class="demo">
+    <input value='{"title":"请选择","msg":"内容内容内容","img":"http://www.w3school.com.cn/i/compatible_firefox.gif","link":"http://www.baidu.com"}' class="data"/><input value="modal" class="callback"/><a class="native" href="native://modal?">native://modal</a>
+    <div class="result">
+
+    </div>
+</div>
+<ol>
+<li><code>title</code>:标题   </li>
+<li><code>msg</code>：内容</li>
+<li><code>img</code>:图片地址</li>
+<li><code>link</code>:点击了解更多跳转地址</li>
+</ol>
+<h3>分享share</h3>
+<pre><code>native://share?data={title:标题,desc:描述,link:分享地址,pic:图片}&amp;callback=share
+</code></pre>
+
+<div class="demo">
+    <input value='{"title":"请选择","desc":"内容内容内容","pic":"http://www.w3school.com.cn/i/compatible_firefox.gif","link":"http://www.baidu.com"}' class="data"/><input value="share" class="callback"/><a class="native" href="native://share?">native://share</a>
+    <div class="result">
+
+    </div>
+</div>
+<ol>
+<li><code>title</code>:标题   （必选）</li>
+<li><code>desc</code>:描述        （必选）</li>
+<li><code>link</code>:链接        （必选）</li>
+<li><code>pic</code>:图片地址   不填不展示</li>
+<li><code>callback</code>:分享点击确定或取消后的回调</li>
+</ol>
+<p>返回的data格式应为:</p>
+<pre><code>{
+    code: 200,
+    msg: &quot;执行成功&quot;,
+    data:&quot;ok&quot;//ok|cancel 点了确定或取消
+}
+</code></pre>
+
+<h3>图片选择selectpic</h3>
+<pre><code>native://selectpic?data={max:5}&amp;callback=selectpic
+</code></pre>
+
+<div class="demo">
+    <input value='{"max":3}' class="data"/><input value="selectpic" class="callback"/><a class="native" href="native://selectpic?">native://selectpic</a>
+    <div class="result">
+
+    </div>
+</div>
+<ol>
+<li><code>max</code>:当前可以选择的最大数量，重复选择不作累计 <em>必填</em></li>
+<li><code>callback</code> ：选择图片后的回调,返回图片的base64</li>
+</ol>
+<p>返回的data格式应为:</p>
+<pre><code>{
+    code: 200,
+    msg: &quot;执行成功&quot;,
+    data:{localIds:[base64,base64]}
+}
+</code></pre>
+
+<h3>日期选择selectdate</h3>
+<pre><code>native://selectdate?data={format:&quot;yyyy-MM-dd&quot;}&amp;callback=selectdate
+</code></pre>
+
+<div class="demo">
+    <input value='{"format":"yyyy-MM-dd HH:mm"}' class="data"/><input value="selectdate" class="callback"/><a class="native" href="native://selectdate?">native://selectdate</a>
+    <div class="result">
+
+    </div>
+</div>
+<ol>
+<li><code>format</code>:返回格式,<code>yyyy-MM-dd</code> 或 <code>yyyy-MM-dd HH:mm</code></li>
+<li><code>callback</code>:选择日期后的回调</li>
+</ol>
+<p>返回的data格式应为:</p>
+<pre><code>{
+    code: 200,
+    msg: &quot;执行成功&quot;,
+    data:'2016-01-06'
+}
+</code></pre>
+
+<h3>选取组件 picker</h3>
+<pre><code>native://picker?data={title:&quot;投标类型&quot;,list:[{text:选项一,value:&quot;001&quot;}]}&amp;callback=picker
+</code></pre>
+
+<div class="demo">
+    <input value='{"title":"投标类型","list":[{"text":"选项一","value":"001"}]}' class="data"/><input value="picker" class="callback"/><a class="native" href="native://picker?">native://picker</a>
+    <div class="result">
+
+    </div>
+</div>
+<ol>
+<li><code>title</code>:标题  <em>必填</em></li>
+<li><code>list</code>:选项数组 ,键值对  <em>必填</em></li>
+<li><code>callback</code>:回调,返回选中项</li>
+</ol>
+<p>返回的data格式应为:</p>
+<pre><code>{
+    code: 200,
+    msg: &quot;执行成功&quot;,
+    data:{text:选项一,value:&quot;001&quot;}
+}
+</code></pre>
+
+<h3>会话</h3>
+<pre><code>native://chat?data={type:1,id:1,name:&quot;xxx&quot;}
+</code></pre>
+
+<div class="demo">
+    <input value='{"type":1,"id":"10001","name":"xxx"}' class="data"/><input value="chat" class="callback"/><a class="native" href="native://chat?">native://chat</a>
+    <div class="result">
+
+    </div>
+</div>
+<ol>
+<li><code>type</code>:会话类型(1)单人，(2)群会话</li>
+<li><code>id</code>:id</li>
+<li><code>name</code>:显示的名称</li>
+</ol>
+<h3>选择企业</h3>
+<pre><code>native://selectcorp?callback=selectcorp&data={"orgId":1002,"orgName":"讯盟"}
+</code></pre>
+
+<div class="demo">
+    <input value='{"orgId":1002,"orgName":"讯盟"}' class="data"/><input value="selectcorp" class="callback"/><a class="native" href="native://selectcorp?">native://selectcorp</a>
+    <div class="result">
+
+    </div>
+</div>
+<ol>
+<li><code>data</code>：当前企业信息</li>
+<li><code>callback</code>：选择企业后的回调</li>
+</ol>
+<p>返回的data格式应为:</p>
+<pre><code>{
+    code: 200,
+    msg: &quot;执行成功&quot;,
+    data:{orgId:1002,orgName:&quot;讯盟&quot;}
+}
+</code></pre>
+
+<h3>拍照,直接拍照，不能从相册获取也不能将拍照后的照片保存</h3>
+<pre><code>native://photo?&amp;callback=photo
+</code></pre>
+
+<div class="demo">
+    <input value="photo" class="callback"/><a class="native" href="native://photo?">native://photo</a>
+    <div class="result">
+
+    </div>
+</div>
+<ol>
+<li><code>callback</code>:返回base64</li>
+</ol>
+<h3>findfriend 打开好友窗口</h3>
+<pre><code>native://findfriend
+</code></pre>
+
+<div class="demo">
+    <a class="native" href="native://findfriend">native://findfriend</a>
+</div>
+
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
+</body>
+</html>
